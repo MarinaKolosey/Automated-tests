@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Onliner Test Plan" verbose="1">
+	
+	<test name="Search Products Test" preserve-order="true">
+	<parameter name="menuLink" value="catalog"/>
+	<parameter name="itemLink" value="Samsung" />
+		<parameter name="maxPrice" value="10000000" />
+		<parameter name="minYear" value="2013" />
+		<parameter name="minDiagonal" value="37" />
+		<parameter name="maxDiagonal" value="42" />
+		<classes>
+ 			<class name="tests.SearchTest" />
+        </classes>
+	</test>
+</suite>
