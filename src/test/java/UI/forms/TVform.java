@@ -13,10 +13,10 @@ import webdriver.elements.TextBox;
  */
 public class TVform extends BaseForm {
 	private static final String locator = "//h1[text() ='Телевизоры']";
-	private static final String formTitle = "Телевизоры";
+	private static final String formTitle = "TVs";
 	private TextBox maxPriceBox = new TextBox(By.xpath("//input[@placeholder ='до']"), "Max Price");
 	String itemLink;
-	private CheckBox checkBoxCriteria = new CheckBox (By.xpath("//div/span[text() = 'Производитель']"),(String.format ("Производитель", "")));
+	private CheckBox checkBoxCriteria = new CheckBox (By.xpath("//div/span[text() = 'Производитель']"),(String.format ("Manufacturer", "")));
 	private TextBox minYearValue = new TextBox (By.xpath("//input[@placeholder='2011']"),"Min Year");	
 	WebElement minDiagonal = browser.getDriver().findElement(By.xpath("//select[contains(@data-bind,\"from\")]"));
 	Select minValue = new Select(minDiagonal);
