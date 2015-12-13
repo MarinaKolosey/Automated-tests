@@ -16,7 +16,7 @@ public class TVform extends BaseForm {
 	private static final String formTitle = "Телевизоры";
 	private TextBox maxPriceBox = new TextBox(By.xpath("//input[@placeholder ='до']"), "Max Price");
 	String itemLink;
-	private CheckBox checkBoxCriteria = new CheckBox (By.xpath("//div/span[text() = 'Производитель']"),(String.format ("Производитель: '%s' ", itemLink)));
+	private CheckBox checkBoxCriteria = new CheckBox (By.xpath("//div/span[text() = 'Производитель']"),(String.format ("Производитель", "")));
 	private TextBox minYearValue = new TextBox (By.xpath("//input[@placeholder='2011']"),"Min Year");	
 	WebElement minDiagonal = browser.getDriver().findElement(By.xpath("//select[contains(@data-bind,\"from\")]"));
 	Select minValue = new Select(minDiagonal);
@@ -67,6 +67,11 @@ public class TVform extends BaseForm {
 	     maxValue.selectByVisibleText(Integer.toString(maxDiagonal)+"\"");
 	     info(String.format("Drop-down Max Diagonal: Checking '%d'", maxDiagonal));
 	     //browser.waitForJQuery();
+	     try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
     }
     
    /*
