@@ -22,7 +22,7 @@ public class SearchResult extends BaseForm {
 	 */
 	public boolean checkManufacturerMatch (String itemLink) {
 		boolean manufactureMatch = browser.getDriver().findElement(By.xpath("//h2[@class='catalog-masthead__title']")).getText().contains(itemLink);
-	    logger.info(String.format("Manufacture should be '%s', result '%s'", itemLink, String.valueOf(manufactureMatch)));
+	    logger.info(String.format("Manufacturer should be '%s', result '%s'", itemLink, String.valueOf(manufactureMatch)));
 	    return manufactureMatch;
 	}
 	
